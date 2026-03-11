@@ -14,18 +14,30 @@
 			<Item Name="appConfig.ini" Type="Document" URL="../../info/appConfig.ini"/>
 			<Item Name="customerLogo.png" Type="Document" URL="../../info/customerLogo.png"/>
 			<Item Name="plcConfig.ini" Type="Document" URL="../../info/plcConfig.ini"/>
+			<Item Name="printerConfig.ini" Type="Document" URL="../../info/printerConfig.ini"/>
+			<Item Name="scannerConfig.ini" Type="Document" URL="../../info/scannerConfig.ini"/>
 		</Item>
 		<Item Name="src" Type="Folder">
 			<Item Name="Barcode Printer Module" Type="Folder">
 				<Item Name="src" Type="Folder">
-					<Item Name="controls" Type="Folder"/>
-					<Item Name="subVIs" Type="Folder"/>
+					<Item Name="controls" Type="Folder" URL="../Barcode Printer Module/src/controls">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="subVIs" Type="Folder" URL="../Barcode Printer Module/src/subVIs">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="mainPrint.vi" Type="VI" URL="../Barcode Printer Module/src/mainPrint.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Barcode Scanner Module" Type="Folder">
 				<Item Name="src" Type="Folder">
-					<Item Name="controls" Type="Folder"/>
-					<Item Name="subVIs" Type="Folder"/>
+					<Item Name="controls" Type="Folder" URL="../Barcode Scanner Module/src/controls">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="subVIs" Type="Folder" URL="../Barcode Scanner Module/src/subVIs">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="mainScanner.vi" Type="VI" URL="../Barcode Scanner Module/src/mainScanner.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Controller Module" Type="Folder">
@@ -48,10 +60,15 @@
 					<Item Name="subVIs" Type="Folder"/>
 				</Item>
 			</Item>
-			<Item Name="Model Select Module" Type="Folder">
+			<Item Name="PLC Module" Type="Folder">
 				<Item Name="src" Type="Folder">
-					<Item Name="controls" Type="Folder"/>
-					<Item Name="subVIs" Type="Folder"/>
+					<Item Name="controls" Type="Folder" URL="../PLC Module/src/controls">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="subVIs" Type="Folder" URL="../PLC Module/src/subVIs">
+						<Property Name="NI.DISK" Type="Bool">true</Property>
+					</Item>
+					<Item Name="mainPLC.vi" Type="VI" URL="../PLC Module/src/mainPLC.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Report Generation Module" Type="Folder">
@@ -168,6 +185,9 @@
 				<Item Name="U16s to Bytes.vi" Type="VI" URL="/&lt;vilib&gt;/NI/Modbus Library/Utility/U16s to Bytes.vi"/>
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 				<Item Name="usereventprio.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/usereventprio.ctl"/>
+				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
+				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
+				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="VISA Flush IO Buffer Mask.ctl" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Flush IO Buffer Mask.ctl"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
