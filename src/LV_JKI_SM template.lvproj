@@ -54,27 +54,30 @@
 			<Item Name="controls" Type="Folder" URL="../controls">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Database Module" Type="Folder">
+			<Item Name="Modbus Module" Type="Folder">
+				<Item Name="src" Type="Folder">
+					<Item Name="controls" Type="Folder">
+						<Item Name="modbusData.ctl" Type="VI" URL="../Modbus Module/src/controls/modbusData.ctl"/>
+						<Item Name="modbusUDE.ctl" Type="VI" URL="../Modbus Module/src/controls/modbusUDE.ctl"/>
+					</Item>
+					<Item Name="subVIs" Type="Folder">
+						<Item Name="getModbusConfig.vi" Type="VI" URL="../Modbus Module/src/subVIs/getModbusConfig.vi"/>
+					</Item>
+					<Item Name="mainModbus.vi" Type="VI" URL="../Modbus Module/src/mainModbus.vi"/>
+				</Item>
+			</Item>
+			<Item Name="Pop-up Module" Type="Folder">
 				<Item Name="src" Type="Folder">
 					<Item Name="controls" Type="Folder"/>
 					<Item Name="subVIs" Type="Folder"/>
-				</Item>
-			</Item>
-			<Item Name="PLC Module" Type="Folder">
-				<Item Name="src" Type="Folder">
-					<Item Name="controls" Type="Folder" URL="../PLC Module/src/controls">
-						<Property Name="NI.DISK" Type="Bool">true</Property>
-					</Item>
-					<Item Name="subVIs" Type="Folder" URL="../PLC Module/src/subVIs">
-						<Property Name="NI.DISK" Type="Bool">true</Property>
-					</Item>
-					<Item Name="mainPLC.vi" Type="VI" URL="../PLC Module/src/mainPLC.vi"/>
+					<Item Name="popUpMain.vi" Type="VI" URL="../Pop-up Module/src/popUpMain.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Report Generation Module" Type="Folder">
 				<Item Name="src" Type="Folder">
 					<Item Name="controls" Type="Folder"/>
 					<Item Name="subVIs" Type="Folder"/>
+					<Item Name="reportGenMain.vi" Type="VI" URL="../Report Generation Module/src/reportGenMain.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Simulation Module" Type="Folder">
@@ -85,7 +88,7 @@
 					<Item Name="subVIs" Type="Folder" URL="../Simulation Module/src/subVIs">
 						<Property Name="NI.DISK" Type="Bool">true</Property>
 					</Item>
-					<Item Name="plcSimulationVI.vi" Type="VI" URL="../Simulation Module/src/plcSimulationVI.vi"/>
+					<Item Name="mainSimulation.vi" Type="VI" URL="../Simulation Module/src/mainSimulation.vi"/>
 				</Item>
 			</Item>
 			<Item Name="subVIs" Type="Folder" URL="../subVIs">
@@ -184,7 +187,6 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="U16s to Bytes.vi" Type="VI" URL="/&lt;vilib&gt;/NI/Modbus Library/Utility/U16s to Bytes.vi"/>
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
-				<Item Name="usereventprio.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/usereventprio.ctl"/>
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
